@@ -223,7 +223,7 @@ extension CalendarView: UICollectionViewDataSource {
         
         if self.marksWeekends {
             let we = indexPath.item % 7
-            let weekDayOption = style.firstWeekday == .sunday ? 0 : 5
+            let weekDayOption = style.firstWeekday.rawValue
             dayCell.isWeekend = we == weekDayOption || we == 6
         }
         

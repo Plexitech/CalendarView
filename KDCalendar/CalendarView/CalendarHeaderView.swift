@@ -67,7 +67,7 @@ open class CalendarHeaderView: UIView {
         formatter.locale = style.locale
         formatter.timeZone = style.calendar.timeZone
         
-        let start = style.firstWeekday == .sunday ? 0 : 1
+        let start = style.firstWeekday.rawValue
         var i = 0
         
         for index in start..<(start+7) {
