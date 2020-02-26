@@ -28,9 +28,14 @@ extension CalendarView {
             }
         }
         
-        public enum FirstWeekdayOptions{
+        public enum FirstWeekdayOptions: Int{
             case sunday
             case monday
+            case tuesday
+            case wednesday
+            case thursday
+            case friday
+            case saturday
         }
         
         public enum CellOutOfRangeDisplayOptions {

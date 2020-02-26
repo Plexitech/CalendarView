@@ -130,7 +130,7 @@ extension CalendarView: UICollectionViewDataSource {
         let date = self.calendar.date(byAdding: monthOffsetComponents, to: firstDayCache)
         
         var firstWeekdayOfMonthIndex    = date == nil ? 0 : self.calendar.component(.weekday, from: date!)
-        firstWeekdayOfMonthIndex       -= style.firstWeekday == .monday ? 1 : 0
+        firstWeekdayOfMonthIndex       -= style.firstWeekday.rawValue
         firstWeekdayOfMonthIndex        = (firstWeekdayOfMonthIndex + 6) % 7 // push it modularly to map it in the range 0 to 6
         
         guard let rangeOfDaysInMonth = date == nil ? nil : self.calendar.range(of: .day, in: .month, for: date!)
